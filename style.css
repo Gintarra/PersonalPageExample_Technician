@@ -9,6 +9,10 @@ body {
     display: flex;
 }
 
+.wrap {
+    flex-wrap: wrap;
+}
+
 .justify-center {
     justify-content: center;
 }
@@ -24,20 +28,26 @@ body {
 .column {
     flex-direction: column;
 }
-
+.row {
+    flex-direction: row;
+}
 .align-s-end {
     align-self: end;
 }
+
 .d-none {
     display: none;
 }
+
 /*alignments*/
 .text-center {
     text-align: center;
 }
+
 .text-right {
     text-align: right;
 }
+
 /*paddings, margins*/
 .pad-15 {
     padding: 15px;
@@ -54,9 +64,11 @@ body {
 .margin-b-20 {
     margin-bottom: 20px;
 }
+
 .margin {
     margin: 10px;
 }
+
 /*Others*/
 .img-logo {
     width: 100%;
@@ -72,6 +84,7 @@ body {
 main {
     width: 80%;
 }
+
 .introduction {
     background-color: white;
     width: auto;
@@ -154,12 +167,13 @@ p {
     font-weight: bold;
 }
 
-#cvBtn:hover{
+#cvBtn:hover {
     transform: scale(1.1);
     background: linear-gradient(90deg, rgba(138, 183, 186, 0.90) 0%, rgba(171, 164, 166, 0.9) 50%);
     border-radius: 10px;
     cursor: pointer;
 }
+
 .card {
     width: 50%;
     border-radius: 20px;
@@ -194,6 +208,7 @@ p {
     color: rgba(23, 192, 243, 0.99);
 
 }
+
 /*RESUME*/
 .card2 {
     width: auto;
@@ -202,7 +217,7 @@ p {
     margin: 10px 10px 20px 0;
     padding: 15px;
     background: linear-gradient(90deg, rgba(138, 183, 186, 0.6) 0%, rgba(171, 164, 166, 0.6) 50%);
-    box-shadow: 5px 5px 15px 1px rgba(105,105,105,0.69);
+    box-shadow: 5px 5px 15px 1px rgba(105, 105, 105, 0.69);
 }
 
 .card2:hover {
@@ -228,18 +243,20 @@ p {
     border-radius: 10px;
     height: 10px;
 }
+
 span {
     font-size: 13px;
 }
+
 /*WORK*/
 .card3 {
-    width: 100%;
+    width: 350px;
     border-radius: 10px;
-    height: auto;
+    height: 350px;
     margin: 10px 10px 20px 0;
     padding: 15px;
     background: linear-gradient(90deg, rgba(138, 183, 186, 0.6) 0%, rgba(171, 164, 166, 0.6) 50%);
-    box-shadow: 5px 5px 15px 1px rgba(105,105,105,0.69);
+    box-shadow: 5px 5px 15px 1px rgba(105, 105, 105, 0.69);
 }
 
 .workImage {
@@ -253,13 +270,99 @@ span {
     background: url("https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80");
     background-position: center;
     backface-visibility: visible;
-    height: 50%;
+    height: 70%;
     width: auto;
     border-radius: 10px;
     padding: 10px;
 }
 
-.card3:hover + .back-img1 {
+.card3:hover > .back-img1 .workImage {
     transform: scale(1.1);
+
+}
+
+.card3:hover {
     color: rgba(23, 192, 243, 0.99);
+}
+
+.card3:hover > h3 > .fa-share {
+    visibility: visible;
+}
+
+.visabilityH {
+    visibility: hidden;
+}
+
+/*blog*/
+.card4 {
+    width: 350px;
+    border-radius: 10px;
+    height: 350px;
+    margin: 10px 10px 20px 0;
+    padding: 15px;
+    background: linear-gradient(90deg, rgba(138, 183, 186, 0.6) 0%, rgba(171, 164, 166, 0.6) 50%);
+    box-shadow: 5px 5px 15px 1px rgba(105, 105, 105, 0.69);
+
+}
+.divBox{
+    overflow: hidden;
+    display: inline-block;
+    height: 70%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.blogImage {
+    display: block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
+.card4:hover > .divBox > .blogImage {
+    transform: scale(1.2);
+    transform-origin: 50% 50%;
+
+}
+
+.card4:hover {
+    color: rgba(23, 192, 243, 0.99);
+}
+
+.card4:hover > h3 > .fa-share {
+    visibility: visible;
+}
+
+/*CONTACT*/
+.contactImage {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
+.divBox2{
+    overflow: hidden;
+    display: inline-block;
+    height: 50%;
+    width: 100%;
+    max-height: 240px;
+    border-radius: 10px;
+}
+
+.sideBar1:hover > .divBox2 > .contactImage {
+    transform: scale(1.2);
+}
+
+.sideBar1 {
+    height: 700px;
+    width: 20%;
+    padding: 5px;
+}
+
+.sideBar2 {
+    height: auto;
+    width: 80%;
+    padding: 5px;
 }
