@@ -10,6 +10,9 @@ body {
 .justify-center {
     justify-content: center;
 }
+.space-btw {
+    justify-content: space-between;
+}
 
 .align-center {
     align-items: center;
@@ -18,7 +21,18 @@ body {
 .column {
     flex-direction: column;
 }
+.align-s-end {
+    align-self: end;
+}
+/*alignments*/
+.text-center {
+    text-align: center;
+}
 
+/*paddings, margins*/
+.pad-15{
+    padding: 15px;
+}
 /*Others*/
 .img-logo {
     width: 100%;
@@ -34,10 +48,11 @@ body {
 .introduction {
     background-color: white;
     /*pakeisti i procentini dydi*/
-    width: 600px;
+    width: 800px;
     height: 300px;
     margin-top: -40px;
     border-radius: 20px;
+    padding: 15px;
 }
 
 .box1 {
@@ -45,16 +60,34 @@ body {
 }
 
 .photo {
-    width: 150px;
-    height: 150px;
-    margin-top: -20px;
+    width: 170px;
+    height: 170px;
+    margin-top: -60px;
     border-radius: 20px;
 }
 
 .box2 {
     width: 50%;
+    border-left: 1px solid grey;
 }
 
-.introduction > h2 {
+.box1 > h2,h3 {
     margin: 10px 0;
+}
+
+.icons {
+    width: 35px;
+    height: 35px;
+    background: linear-gradient(90deg, rgba(138,183,186,0.64) 0%, rgba(171,164,166,0.64) 50%);
+    margin: 0 10px;
+    border-radius: 10px;
+    padding: 2px;
+}
+.icons:hover {
+    transform: scale(1.1);
+    background: linear-gradient(90deg, rgba(138,183,186,0.90) 0%, rgba(171,164,166,0.9) 50%);
+}
+
+p {
+    margin-bottom: 5px;
 }
