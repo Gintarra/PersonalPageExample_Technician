@@ -1,8 +1,9 @@
 body {
     width: 100%;
     font-family: "Comic Sans MS", sans-serif;
+    margin: 0;
+    padding: 0;
 }
-
 
 /*Flex*/
 .d-flex {
@@ -28,15 +29,21 @@ body {
 .column {
     flex-direction: column;
 }
+
 .row {
     flex-direction: row;
 }
+
 .align-s-end {
     align-self: end;
 }
 
 .d-none {
     display: none;
+}
+
+.f-grow1 {
+    flex: 1;
 }
 
 /*alignments*/
@@ -122,6 +129,7 @@ main {
     margin: 0 5px;
     border-radius: 10px;
     padding: 5px;
+    box-shadow: 5px 5px 15px 1px rgba(105, 105, 105, 0.69);
 }
 
 .icons:hover {
@@ -129,10 +137,12 @@ main {
     background: linear-gradient(90deg, rgba(138, 183, 186, 0.90) 0%, rgba(171, 164, 166, 0.9) 50%);
     cursor: pointer;
 }
+
 .selected {
     background: linear-gradient(90deg, rgba(138, 183, 186, 0.90) 0%, rgba(171, 164, 166, 0.9) 50%);
     border-radius: 10px;
 }
+
 #darkMode {
     background: linear-gradient(90deg, rgba(138, 183, 186, 0.64) 0%, rgba(171, 164, 166, 0.64) 50%);
     border-radius: 10px;
@@ -140,12 +150,12 @@ main {
     color: black;
     font-weight: bold;
 }
-#darkMode:hover{
+
+#darkMode:hover {
     transform: scale(1.1);
     background: linear-gradient(90deg, rgba(138, 183, 186, 0.90) 0%, rgba(171, 164, 166, 0.9) 50%);
     cursor: pointer;
 }
-
 
 
 p {
@@ -157,12 +167,15 @@ p {
     width: 15%;
     border-radius: 20px;
     height: 100%;
+    position: sticky;
+    top: 0;
 }
 
 .mainPage {
     background-color: white;
     width: 85%;
     border-radius: 20px;
+
 }
 
 .navBarBtn {
@@ -224,7 +237,6 @@ p {
 
 .col {
     color: rgba(23, 192, 243, 0.99);
-
 }
 
 /*RESUME*/
@@ -322,7 +334,8 @@ span {
     box-shadow: 5px 5px 15px 1px rgba(105, 105, 105, 0.69);
 
 }
-.divBox{
+
+.divBox {
     overflow: hidden;
     display: inline-block;
     height: 70%;
@@ -360,7 +373,7 @@ span {
     transition: all 0.5s;
 }
 
-.divBox2{
+.divBox2 {
     overflow: hidden;
     display: inline-block;
     height: 40%;
@@ -391,7 +404,7 @@ span {
     box-shadow: 5px 5px 15px 1px rgba(105, 105, 105, 0.69);
 }
 
-#name, #phone{
+#name, #phone {
     width: 250px;
     height: 40px;
     border-radius: 5px;
@@ -439,6 +452,140 @@ label {
     color: #e1dbdb;
 }
 
+.darkModeClassCard {
+    background: linear-gradient(90deg, rgba(21, 23, 23, 0.6) 0%, rgba(117, 115, 116, 0.6) 50%);
+}
+
 .darkModeMain {
     background-color: black;
+}
+
+/*modal*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(245, 236, 236, 0.7); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+    height: 40%;
+    border-radius: 10px;
+    background: linear-gradient(90deg, rgb(138, 183, 186) 0%, rgb(171, 164, 166) 50%);
+    box-shadow: 5px 5px 15px 1px rgba(105, 105, 105, 0.69);
+}
+
+.sizeModalImg {
+    height: 90%;
+}
+
+/* The Close Button */
+.close {
+    color: #111010;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modalBtn {
+    padding: 10px;
+    border-radius: 10px;
+    font-family: "Comic Sans MS", sans-serif;
+    font-weight: bold;
+    background: linear-gradient(90deg, rgba(138, 183, 186, 0.64) 0%, rgba(171, 164, 166, 0.64) 50%);
+    box-shadow: 5px 5px 15px 1px rgba(105, 105, 105, 0.69);
+    border: solid 1px grey;
+    font-size: 10px;
+
+}
+
+.modalBtn:hover {
+    transform: scale(1.1);
+    background: linear-gradient(90deg, rgba(138, 183, 186, 0.90) 0%, rgba(171, 164, 166, 0.9) 50%);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/*Modal (work)*/
+.modal2 {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(245, 236, 236, 0.7);
+/
+}
+
+.modal-content2 {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    background: linear-gradient(90deg, rgb(138, 183, 186) 0%, rgb(171, 164, 166) 50%);
+    box-shadow: 5px 5px 15px 1px rgba(105, 105, 105, 0.69);
+}
+
+.sizeModalImg2 {
+    height: 400px;
+}
+
+
+/* The Close Button */
+.close2 {
+    color: #111010;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close2:hover,
+.close2:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modalBtn2 {
+    padding: 10px;
+    border-radius: 10px;
+    font-family: "Comic Sans MS", sans-serif;
+    font-weight: bold;
+    background: linear-gradient(90deg, rgba(138, 183, 186, 0.64) 0%, rgba(171, 164, 166, 0.64) 50%);
+    box-shadow: 5px 5px 15px 1px rgba(105, 105, 105, 0.69);
+    border: solid 1px grey;
+    font-size: 10px;
+
+}
+
+.modalBtn2:hover {
+    transform: scale(1.1);
+    background: linear-gradient(90deg, rgba(138, 183, 186, 0.90) 0%, rgba(171, 164, 166, 0.9) 50%);
+    border-radius: 10px;
+    cursor: pointer;
 }
