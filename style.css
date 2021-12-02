@@ -22,6 +22,10 @@ body {
     justify-content: space-between;
 }
 
+.space-ev {
+    justify-content: space-evenly;
+}
+
 .align-center {
     align-items: center;
 }
@@ -43,7 +47,7 @@ body {
 }
 
 .f-grow1 {
-    flex: 1;
+    flex-grow: 1;
 }
 
 /*alignments*/
@@ -175,7 +179,6 @@ p {
     background-color: white;
     width: 85%;
     border-radius: 20px;
-
 }
 
 .navBarBtn {
@@ -206,7 +209,7 @@ p {
 }
 
 .card {
-    width: 50%;
+    width: 45%;
     border-radius: 20px;
     border: 1px solid grey;
     height: auto;
@@ -405,7 +408,7 @@ span {
 }
 
 #name, #phone {
-    width: 250px;
+    width: 100%;
     height: 40px;
     border-radius: 5px;
     border: solid 1px grey;
@@ -454,6 +457,18 @@ label {
 
 .darkModeClassCard {
     background: linear-gradient(90deg, rgba(21, 23, 23, 0.6) 0%, rgba(117, 115, 116, 0.6) 50%);
+    width: auto;
+    border-radius: 10px;
+    height: auto;
+    margin: 10px 10px 20px 0;
+    padding: 15px;
+    box-shadow: 5px 5px 15px 1px rgba(105, 105, 105, 0.69);
+}
+
+.darkModeClassCard:hover {
+    color: #eeeaea;
+    background: linear-gradient(90deg, rgba(28, 30, 30, 0.9) 0%, rgba(44, 41, 41, 0.9) 50%);
+
 }
 
 .darkModeMain {
@@ -588,4 +603,171 @@ label {
     background: linear-gradient(90deg, rgba(138, 183, 186, 0.90) 0%, rgba(171, 164, 166, 0.9) 50%);
     border-radius: 10px;
     cursor: pointer;
+}
+
+/*Responsive design*/
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    /*.md-size {*/
+    /*    !*transform: scale(0.8);*!*/
+    /*    !*transform-origin: top;*!*/
+    /*}*/
+
+    .md-d-flex {
+        display: flex;
+    }
+
+    .md-d-block {
+        display: block;
+    }
+
+    .md-column {
+        flex-direction: column;
+    }
+
+    .md-row {
+        flex-direction: row;
+    }
+
+    .md-justify-center {
+        justify-content: center;
+    }
+
+    .md-align-center {
+        align-self: center;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .sm-size {
+        transform: scale(0.8);
+        transform-origin: 0 0;
+    }
+
+    .sm-d-flex {
+        display: flex;
+    }
+
+    .sm-d-block {
+        display: block;
+    }
+
+    .sm-column {
+        flex-direction: column;
+    }
+
+    .sm-row {
+        flex-direction: row;
+    }
+
+    .sm-justify-center {
+        justify-content: center;
+    }
+
+    .sm-align-center {
+        align-self: center;
+    }
+
+    .sm-box2 {
+        border: none;
+    }
+
+    .sm-align-s-center {
+        align-self: center;
+    }
+
+    .sm-navBar {
+        width: 94%;
+        height: 100%;
+    }
+    .sm-card {
+        width: auto;
+        height: auto;
+    }
+    .sm-mainPage {
+        background-color: white;
+        width: 94%;
+        border-radius: 20px;
+        height: 100%;
+    }
+    .sm-space-btw {
+        justify-content: space-between;
+    }
+    .sideBar1 {
+        height: 100%;
+        width: 30%;
+        padding: 15px;
+        border-radius: 10px;
+        background: linear-gradient(90deg, rgba(138, 183, 186, 0.6) 0%, rgba(171, 164, 166, 0.6) 50%);
+        box-shadow: 5px 5px 15px 1px rgba(105, 105, 105, 0.69);
+    }
+
+    .sideBar2 {
+        height: 100%;
+        width: 70%;
+        padding: 15px;
+        border-radius: 10px;
+        background: linear-gradient(90deg, rgba(138, 183, 186, 0.6) 0%, rgba(171, 164, 166, 0.6) 50%);
+        box-shadow: 5px 5px 15px 1px rgba(105, 105, 105, 0.69);
+    }
+    #name, #phone {
+        width: 90%;
+        height: 40px;
+        border-radius: 5px;
+        border: solid 1px grey;
+        margin-bottom: 20px;
+    }
+
+    #email, #subject {
+        width: 95%;
+        height: 40px;
+        border-radius: 5px;
+        border: solid 1px grey;
+        margin-bottom: 20px;
+    }
+
+    #message {
+        width: 95%;
+        height: 200px;
+        border-radius: 5px;
+        border: solid 1px grey;
+        margin-bottom: 20px;
+    }
+    .sm-grow-none {
+        flex-grow: unset;
+    }
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-color: rgba(245, 236, 236, 0.7); /* Black w/ opacity */
+    }
+    .modal-content {
+        background-color: #fefefe;
+        margin: 0 auto; /* 15% from the top and centered */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 50%; /* Could be more or less, depending on screen size */
+        height: 80%;
+        border-radius: 10px;
+        background: linear-gradient(90deg, rgb(138, 183, 186) 0%, rgb(171, 164, 166) 50%);
+        box-shadow: 5px 5px 15px 1px rgba(105, 105, 105, 0.69);
+    }
+
+    .sizeModalImg {
+        height: 50%;
+        width: auto;
+    }
+
+    .sm-darkModeClass {
+        background-color: #2f2d2d;
+        color: #e1dbdb;
+    }
+
 }

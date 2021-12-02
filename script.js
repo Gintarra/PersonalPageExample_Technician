@@ -1,5 +1,6 @@
 const icons = document.querySelectorAll(".icons");
 const sections = document.querySelectorAll(".mainPage");
+const smSections = document.querySelectorAll(".sm-mainPage");
 const buttons = document.querySelectorAll(".navBarBtn");
 const darkMode = document.querySelector("#darkMode");
 const intro = document.querySelector(".introduction");
@@ -8,6 +9,8 @@ const container = document.querySelector(".container");
 const footer = document.querySelector("footer");
 const resumeCard = document.querySelectorAll(".card2");
 const ratingBox = document.querySelectorAll(".rating");
+const inputs = document.querySelectorAll("input");
+const textArea = document.querySelector("textarea")
 //Modal (Work)
 const modal = document.querySelectorAll(".modal");
 const modalBtnCard = document.querySelectorAll(".card3");
@@ -19,7 +22,7 @@ const closeModal2 = document.querySelectorAll(".close2");
 
 let clicked = false;
 
-console.log(footer)
+console.log(smSections)
 
 icons.forEach((x, i) => x.onclick = () => {
     if (i === 0 || i === 3)
@@ -43,21 +46,31 @@ darkMode.onclick = () => {
         intro.classList.remove("darkModeClass");
         navBar.classList.remove("darkModeClass");
         sections.forEach(x => x.classList.remove("darkModeClass"));
+        smSections.forEach(x => x.classList.remove("sm-darkModeClass"));
         container.classList.remove("darkModeMain");
         footer.style.color = "black";
         darkMode.style.color = "black";
         resumeCard.forEach(x => x.classList.remove("darkModeClassCard"));
-        ratingBox.forEach(x => x.classList.remove("darkModeClassCard"));
+        resumeCard.forEach(x => x.classList.add("card2"));
+        ratingBox.forEach(x => x.classList.remove("darkModeClass"));
+        inputs.forEach(x=> x.classList.remove("darkModeClass"));
+        textArea.classList.remove("darkModeClass");
+
     } else {
         console.log("dark Mode");
         intro.classList.add("darkModeClass");
         navBar.classList.add("darkModeClass");
         sections.forEach(x => x.classList.add("darkModeClass"));
+        smSections.forEach(x => x.classList.add("sm-darkModeClass"));
+        console.log(smSections, "jkh")
         container.classList.add("darkModeMain");
         footer.style.color = "#e1dbdb";
         darkMode.style.color = "#e1dbdb"
         resumeCard.forEach(x => x.classList.add("darkModeClassCard"));
-        ratingBox.forEach(x => x.classList.add("darkModeClassCard"));
+        resumeCard.forEach(x => x.classList.remove("card2"));
+        ratingBox.forEach(x => x.classList.add("darkModeClass"));
+        inputs.forEach(x=> x.classList.add("darkModeClass"));
+        textArea.classList.add("darkModeClass");
     }
     clicked = !clicked;
 }
@@ -72,7 +85,6 @@ closeModal.forEach((y, j) => y.onclick = () => {
 })
 
 console.log(modal)
-
 
 
 //MODAL (BLOG)
